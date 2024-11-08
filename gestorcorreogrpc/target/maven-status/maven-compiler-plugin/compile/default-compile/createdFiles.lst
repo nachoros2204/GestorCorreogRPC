@@ -1,0 +1,17 @@
+com\filtros\FiltroDeTituloYRemitente.class
+com\interfaces\ICorreo.class
+com\Persona.class
+com\App.class
+com\filtros\Filtro.class
+com\Contacto.class
+com\filtros\FiltroDeRemitente.class
+com\Mail.class
+com\interfaces\INombre.class
+com\Caja.class
+com\MailManager.class
+com\Usuario.class
+com\filtros\FiltroDeTitulo.class
+com\filtros\FiltroDeTituloYMensaje.class
+com\GrupoDeUsuarios.class
+com\filtros\FiltroDeMensaje.class
+com\interfaces\IApellido.class
