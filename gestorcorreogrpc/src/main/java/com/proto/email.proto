@@ -1,2 +1,9 @@
 syntax = "proto3";
 
+<<<<<<< HEAD
+=======
+package email;
+service EmailService {
+    rpc SendEmail(EmailRequest) returns (EmailResponse);
+    rpc ReceiveEmail(ReceiveRequest) returns (EmailList);
+>>>>>>> 621f4a1fd979b9e6632342241dc6f5a4b2697a50
