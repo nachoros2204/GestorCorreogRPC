@@ -3,10 +3,11 @@
   <groupId>com.example</groupId>
   <artifactId>gestorcorreogrpc</artifactId>
   <version>1.0-SNAPSHOT</version>
+
   <properties>
     <!-- Configuración de la versión de Java -->
-    <maven.compiler.source>17</maven.compiler.source> <!-- Cambiado a Java 17 -->
-    <maven.compiler.target>17</maven.compiler.target> <!-- Cambiado a Java 17 -->
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.6.0</junit.version>
     <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
@@ -14,10 +15,8 @@
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
     <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-    <!-- JaCoCo thresholds. Increased to 0% for no limitations -->
     <jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
     <jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
-    <!-- Removed complexity limits -->
   </properties>
 
   <dependencies>
@@ -35,7 +34,7 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Dependencia para gRPC -->
+    <!-- Dependencias para gRPC -->
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-api</artifactId>
@@ -51,10 +50,18 @@
       <artifactId>grpc-stub</artifactId>
       <version>1.68.0</version>
     </dependency>
+
+    <!-- Dependencia para Protobuf -->
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>4.28.3</version>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <!-- Enforcer Plugin para verificar la versión de Maven -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -76,12 +83,14 @@
         </executions>
       </plugin>
 
+      <!-- Plugin para pruebas unitarias -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
       </plugin>
 
+      <!-- Plugin JaCoCo para cobertura de código -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -124,27 +133,21 @@
                     </limit>
                   </limits>
                 </rule>
-                <!-- Removed complexity rule configurations -->
               </rules>
             </configuration>
           </execution>
         </executions>
       </plugin>
 
+      <!-- Plugin para Protobuf y gRPC -->
       <plugin>
-        <groupId>org.xolstice.maven.plugins</groupId>
+        <groupId>com.google.protobuf</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>
-        <version>0.6.1</version>
-        <configuration>
-          <protocArtifact>com.google.protobuf:protoc:4.28.3:exe:${os.detected.classifier}</protocArtifact>
-          <pluginId>grpc-java</pluginId>
-          <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.68.0:exe:${os.detected.classifier}</pluginArtifact>
-        </configuration>
+        <version>3.1.0</version> <!-- Usando la versión 3.1.0 -->
         <executions>
           <execution>
             <goals>
-              <goal>compile</goal>
-              <goal>compile-custom</goal>
+              <goal>generate</goal> <!-- Goal correcto para generar los archivos .proto -->
             </goals>
           </execution>
         </executions>
@@ -154,6 +157,7 @@
 
   <reporting>
     <plugins>
+      <!-- Plugin para generar documentación con Javadoc -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
