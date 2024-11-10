@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 public class UsuarioTest {
-    
+
     @Test
     public void crear_nuevo_usuario_con_nombre_apellido_y_correo() {
         Usuario nacho = new Usuario("Nacho", "Rosales", "nacho@gmail.com");
@@ -22,6 +22,7 @@ public class UsuarioTest {
         MailManager gestorCorreo = new MailManager(); 
         Usuario nacho = gestorCorreo.crearNuevoUsuario("Nacho", "Rosales", "nacho@gmail.com");
 
+        //verificamos que el usuario ha sido agregado correctamente a la lista de usuarios.
         assertEquals(1, gestorCorreo.getListaUsuarios().size());
         assertEquals(nacho, gestorCorreo.getListaUsuarios().get(0));
     }
@@ -30,6 +31,8 @@ public class UsuarioTest {
     public void personalizar_direccion_de_correo() {
         MailManager gestorCorreo = new MailManager(); 
         Usuario nacho = gestorCorreo.crearNuevoUsuario("Nacho", "Rosales", "nacho@gmail.com");
+
+        //verificamos que la dirección de correo se haya guardado correctamente
         assertEquals("nacho@gmail.com", gestorCorreo.getListaUsuarios().get(0).getDireccionCorreo());
     }
 
@@ -37,6 +40,8 @@ public class UsuarioTest {
     public void testSetYGetCorreo() {
         Usuario nacho = new Usuario("Nacho", "Rosales", "nacho@example.com");
         nacho.setDireccionCorreo("nuevo@example.com");
+
+        //verificamos que la dirección de correo se haya actualizado correctamente.
         assertEquals("nuevo@example.com", nacho.getDireccionCorreo());
     }
 
@@ -44,6 +49,8 @@ public class UsuarioTest {
     public void testSetYGetApellido() {
         Usuario juani = new Usuario("Juani", "Gualtieri", "juani@example.com");
         juani.setApellido("NuevoApellido");
+
+        //verificamos que el apellido se haya actualizado correctamente.
         assertEquals("NuevoApellido", juani.getApellido());
     }
 
@@ -51,6 +58,8 @@ public class UsuarioTest {
     public void testSetYGetNombre() {
         Usuario lourdes = new Usuario("Lourdes", "GomezSierra", "lourdes@example.com");
         lourdes.setNombre("NuevoNombre");
+
+        //verificamos que el nombre se haya actualizado correctamente.
         assertEquals("NuevoNombre", lourdes.getNombre());
     }
 
@@ -62,6 +71,7 @@ public class UsuarioTest {
 
         ArrayList<Contacto> listaContactos = nacho.getListaDeContactos();
 
+        //verificamos que los contactos se hayan agregado correctamente.
         assertEquals(2, listaContactos.size());
         assertTrue(listaContactos.contains(contacto1));
         assertTrue(listaContactos.contains(contacto2));
@@ -70,6 +80,8 @@ public class UsuarioTest {
     @Test
     public void obtener_correo() {
         Usuario juani = new Usuario("Juani", "Gualtieri", "juani@example.com");
+
+        //verificamos que la direccion de correo sea la correcta.
         assertEquals("juani@example.com", juani.getDireccionCorreo());
     }
 }
