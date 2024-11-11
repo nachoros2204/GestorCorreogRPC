@@ -14,9 +14,7 @@
     <checkstyle.version>8.45.1</checkstyle.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
-    <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-    <jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
-    <jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
+    <maven-javadoc-plugin.version>3.21.9</maven-javadoc-plugin.version>
   </properties>
 
   <dependencies>
@@ -143,7 +141,7 @@
       <plugin>
         <groupId>com.google.protobuf</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>
-        <version>3.1.0</version> <!-- Usando la versión 3.1.0 -->
+        <version>3.21.9</version> <!-- Usando la versión 3.1.0 -->
         <executions>
           <execution>
             <goals>
