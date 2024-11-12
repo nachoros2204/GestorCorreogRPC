@@ -35,7 +35,7 @@ public class MailClient {
     }
 
     public static void main(String[] args) {
-        String host = "192.168.56.1";
+        String host = "localhost";
         int port = 50051;
 
         MailClient client = new MailClient(host, port);
