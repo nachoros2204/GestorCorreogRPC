@@ -31,7 +31,6 @@ com\filtros\FiltroDeRemitente.class
 com\MailServiceGrpc$AsyncService.class
 com\MandarMailRequest.class
 com\GrupoDeUsuarios$1.class
-com\MailClient.class
 com\MailServiceGrpc$2.class
 com\MailServiceGrpc$MailServiceFileDescriptorSupplier.class
 com\MandarMailRequest$Builder.class

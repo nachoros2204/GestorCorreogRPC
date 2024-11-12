@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com;
+option java_multiple_files = true;
+
+service MailService {
+    rpc mandarMail(MandarMailRequest) returns (MandarMailResponse);
+}
+
+// Definición del mensaje de solicitud para enviar un correo
+message MandarMailRequest {
+    string titulo = 1;
+    string mensaje = 2;
+    string remitente = 3;
+    repeated string destinatarios = 4; // Lista de direcciones de correo de los destinatarios
+    bool esFavorito = 5;
+    repeated Usuario usuariosGrupo = 6; // Usuarios pertenecientes al grupo (si aplica)
+}
+
+// Definición del mensaje de respuesta para confirmar el envío del correo
+message MandarMailResponse {
+    string status = 1; // Status del envío, como "Enviado", "Fallido", etc.
+    string detalle = 2; // Mensaje adicional sobre el resultado del envío
+}
+
+// Representación de un usuario en el sistema
+message Usuario {
+    string nombre = 1;
+    string apellido = 2;
+    string direccionCorreo = 3;
+}
+
+// Representación del correo, según la clase Mail
+message Mail {
+    string titulo = 1;
+    string mensaje = 2;
+    string remitente = 3;
+    repeated string destinatario = 4;
+    bool esFavorito = 5;
+}
+
+// Grupo de usuarios, como en GrupoDeUsuarios
+message GrupoDeUsuarios {
+    repeated Usuario miembros = 1;
+}
