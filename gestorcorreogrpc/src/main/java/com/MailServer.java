@@ -10,7 +10,7 @@ public class MailServer {
 
     public MailServer(int port) {
         this.port = port;
-        this.server = ServerBuilder.forPort(port)
+        this.server = ServerBuilder.forPort(50051)
                 .addService(new EmailServiceImpl())
                 .build();
     }

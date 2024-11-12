@@ -26,8 +26,21 @@ public class MailClient {
                 .addAllUsuariosGrupo(usuariosGrupo)
                 .build();
         try {
+            // Imprimir destinatarios individuales
+            System.out.println("Enviando correo a los siguientes destinatarios individuales:");
+            for (String destinatario : destinatarios) {
+                System.out.println("- " + destinatario);
+            }
+
+            // Imprimir destinatarios de grupo
+            System.out.println("Enviando correo a los siguientes destinatarios en grupo:");
+            for (Usuario usuario : usuariosGrupo) {
+                System.out.println("- " + usuario.getNombre());
+            }
+
+            // Enviar el correo
             MandarMailResponse response = mailServiceStub.mandarMail(request);
-            System.out.println("Estatus del envio: " + response.getStatus());
+            System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
         } catch (StatusRuntimeException e) {
             System.err.println("Error al enviar el correo: " + e.getStatus());
@@ -35,20 +48,26 @@ public class MailClient {
     }
 
     public static void main(String[] args) {
-        String host = "localhost";
+        String host = "192.168.0.72";
         int port = 50051;
 
-        MailClient client = new MailClient(host, port);
+        MailClient client = new MailClient("192.168.0.72", 50051);
 
         String titulo = "Prueba de Correo";
         String mensaje = "Este es un mensaje de prueba.";
         String remitente = "remitente@ejemplo.com";
+        
         List<String> destinatarios = new ArrayList<>();
         destinatarios.add("destinatario@ejemplo.com");
+
         boolean esFavorito = false;
 
+        // Añadir usuarios a la lista de grupo
         List<Usuario> usuariosGrupo = new ArrayList<>();
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("Usuario Grupo 1").build());
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("Usuario Grupo 2").build());
 
         client.enviarCorreo(titulo, mensaje, remitente, destinatarios, esFavorito, usuariosGrupo);
     }
 }
+
