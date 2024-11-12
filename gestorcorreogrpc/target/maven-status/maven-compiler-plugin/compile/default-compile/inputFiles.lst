@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeTituloYMensaje.java
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\target\generated-sources\protobuf\java\com\UsuarioOrBuilder.java
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\src\main\java\com\interfaces\IApellido.java
@@ -22,3 +23,19 @@ C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\src\main\jav
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeMensaje.java
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeTitulo.java
 C:\Users\nacho\OneDrive\Escritorio\GestormailsgRPC\gestorcorreogrpc\target\generated-sources\protobuf\java\com\GrupoDeUsuarios.java
+=======
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\MailServer.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeRemitente.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\EmailServiceImpl.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeTituloYRemitente.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\interfaces\IApellido.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\MailClient.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\target\generated-sources\protobuf\java\com\Gestorcorreogrpc.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeTitulo.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\interfaces\ICorreo.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeMensaje.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\Filtro.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\filtros\FiltroDeTituloYMensaje.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\src\main\java\com\interfaces\INombre.java
+C:\Users\nacho\OneDrive\Escritorio\GestorCorreogRPC\gestorcorreogrpc\target\generated-sources\protobuf\grpc-java\com\MailServiceGrpc.java
+>>>>>>> 9aea35fd5aaba9c5af8833d98e0f47523a87d182
