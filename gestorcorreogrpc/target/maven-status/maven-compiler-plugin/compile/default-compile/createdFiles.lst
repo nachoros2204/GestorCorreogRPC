@@ -38,7 +38,6 @@ com\MailServiceGrpc$MailServiceMethodDescriptorSupplier.class
 com\MailServiceGrpc$MailServiceImplBase.class
 com\Gestorcorreogrpc$GrupoDeUsuarios$Builder.class
 com\Gestorcorreogrpc$MandarMailResponse.class
-com\Gestorcorreogrpc$1.class
 com\Gestorcorreogrpc.class
 com\filtros\FiltroDeRemitente.class
 com\Gestorcorreogrpc$Mail$1.class
