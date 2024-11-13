@@ -16,7 +16,7 @@ public class MailClient {
         mailServiceStub = MailServiceGrpc.newBlockingStub(channel);
     }
 
-    public void enviarCorreo(String titulo, String mensaje, String remitente, List<String> destinatarios, boolean esFavorito, List<Usuario> usuariosGrupo) {
+    public void enviarCorreo(String titulo, String mensaje, String remitente, ArrayList<String> destinatarios, boolean esFavorito, ArrayList<Usuario> usuariosGrupo) {
         MandarMailRequest request = MandarMailRequest.newBuilder()
                 .setTitulo(titulo)
                 .setMensaje(mensaje)
@@ -58,14 +58,14 @@ public class MailClient {
         String remitente = "remitente@ejemplo.com";
         
         List<String> destinatarios = new ArrayList<>();
-        destinatarios.add("destinatario@ejemplo.com");
+        destinatarios.add("nacho@gmail.com");
 
         boolean esFavorito = false;
 
-        // Añadir usuarios a la lista de grupo
-        List<Usuario> usuariosGrupo = new ArrayList<>();
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("Usuario Grupo 1").build());
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("Usuario Grupo 2").build());
+        //Añadir usuarios a la lista de grupo
+        ArrayList<Usuario> usuariosGrupo = new ArrayList<>();
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("lourdes@gmail.com").build());
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("juani@gmail.com").build());
 
         client.enviarCorreo(titulo, mensaje, remitente, destinatarios, esFavorito, usuariosGrupo);
     }
