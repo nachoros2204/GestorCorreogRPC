@@ -5,8 +5,8 @@ import io.grpc.ServerBuilder;
 import java.io.IOException;
 
 public class MailServer {
-    private final int port;
-    private final Server server;
+    private int port;
+    private Server server;
 
     public MailServer(int port) {
         this.port = port;

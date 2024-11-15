@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MailClient {
-    private final MailServiceGrpc.MailServiceBlockingStub mailServiceStub;
-    private final String destinatario;
-    private final List<Mail> historialDeCorreos; // Historial de correos
+    private MailServiceGrpc.MailServiceBlockingStub mailServiceStub;
+    private String destinatario;
+    private List<Mail> historialDeCorreos;
 
     public MailClient(String host, int port, String destinatario) {
         ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
@@ -17,7 +17,7 @@ public class MailClient {
                 .build();
         this.mailServiceStub = MailServiceGrpc.newBlockingStub(channel);
         this.destinatario = destinatario;
-        this.historialDeCorreos = new ArrayList<>(); // Inicialización del historial
+        this.historialDeCorreos = new ArrayList<>(); //creamos el historial
     }
 
     public void enviarCorreo(String titulo, String mensaje, String remitente, boolean esFavorito, List<String> destinatarios, List<Usuario> usuariosGrupo) {
@@ -30,10 +30,10 @@ public class MailClient {
                 .addAllUsuariosGrupo(usuariosGrupo)
                 .build();
         try {
-            // Enviar el correo
+            //enviamos correo
             MandarMailResponse response = mailServiceStub.mandarMail(request);
 
-            // Mostrar estatus, detalle y correo recibido
+            //mostrar estatus, detalle y correo recibido
             System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
             System.out.println("Correo recibido por " + destinatario + ":");
