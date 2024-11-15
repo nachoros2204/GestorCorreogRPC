@@ -12,10 +12,19 @@ public class EmailServiceImpl extends MailServiceGrpc.MailServiceImplBase {
         String remitente = request.getRemitente();
         boolean esFavorito = request.getEsFavorito();
         
-        for (String destinatario : request.getDestinatariosList()) {
-            System.out.println("Enviando a: " + destinatario);
+        System.out.println("=== Enviando Correo ===");
+        System.out.println("Título: " + titulo);
+        System.out.println("Mensaje: " + mensaje);
+        System.out.println("Remitente: " + remitente);
+
+        // Envío a destinatarios individuales
+        if (!request.getDestinatariosList().isEmpty()) {
+            for (String destinatario : request.getDestinatariosList()) {
+                System.out.println("Correo enviado a destinatario individual: " + destinatario);
+            }
         }
 
+        // Envío a grupo de usuarios
         if (request.getUsuariosGrupoCount() > 0) {
             System.out.println("Enviando correo a grupo de usuarios:");
             for (Usuario usuario : request.getUsuariosGrupoList()) {
