@@ -8,15 +8,17 @@ import java.util.List;
 
 public class MailClient {
     private final MailServiceGrpc.MailServiceBlockingStub mailServiceStub;
+    private final String destinatario;
 
-    public MailClient(String host, int port) {
+    public MailClient(String host, int port, String destinatario) {
         ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext()
                 .build();
-        mailServiceStub = MailServiceGrpc.newBlockingStub(channel);
+        this.mailServiceStub = MailServiceGrpc.newBlockingStub(channel);
+        this.destinatario = destinatario;
     }
 
-    public void enviarCorreo(String titulo, String mensaje, String remitente, ArrayList<String> destinatarios, boolean esFavorito, ArrayList<Usuario> usuariosGrupo) {
+    public void enviarCorreo(String titulo, String mensaje, String remitente, boolean esFavorito, List<String> destinatarios, List<Usuario> usuariosGrupo) {
         MandarMailRequest request = MandarMailRequest.newBuilder()
                 .setTitulo(titulo)
                 .setMensaje(mensaje)
@@ -26,48 +28,47 @@ public class MailClient {
                 .addAllUsuariosGrupo(usuariosGrupo)
                 .build();
         try {
-            // Imprimir destinatarios individuales
-            System.out.println("Enviando correo a los siguientes destinatarios individuales:");
-            for (String destinatario : destinatarios) {
-                System.out.println("- " + destinatario);
-            }
-
-            // Imprimir destinatarios de grupo
-            System.out.println("Enviando correo a los siguientes destinatarios en grupo:");
-            for (Usuario usuario : usuariosGrupo) {
-                System.out.println("- " + usuario.getNombre());
-            }
-
             // Enviar el correo
             MandarMailResponse response = mailServiceStub.mandarMail(request);
             System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
+
+            // Mostrar correo recibido en el cliente correspondiente
+            System.out.println("Correo recibido por " + destinatario + ":");
+            System.out.println("Título: " + titulo);
+            System.out.println("Mensaje: " + mensaje);
+            System.out.println("Remitente: " + remitente);
         } catch (StatusRuntimeException e) {
             System.err.println("Error al enviar el correo: " + e.getStatus());
         }
     }
 
     public static void main(String[] args) {
-        String host = "192.168.0.72";
+        String host = "localhost";
         int port = 50051;
 
-        MailClient client = new MailClient("192.168.0.72", 50051);
+        if (args.length < 1) {
+            System.err.println("Especifique el destinatario como argumento.");
+            return;
+        }
+
+        String destinatario = args[0];
+        MailClient client = new MailClient(host, port, destinatario);
 
         String titulo = "Prueba de Correo";
         String mensaje = "Este es un mensaje de prueba.";
         String remitente = "remitente@ejemplo.com";
         
         List<String> destinatarios = new ArrayList<>();
-        destinatarios.add("nacho@gmail.com");
+        destinatarios.add(destinatario);
 
         boolean esFavorito = false;
 
-        //Añadir usuarios a la lista de grupo
+        // Añadir usuarios al grupo
         ArrayList<Usuario> usuariosGrupo = new ArrayList<>();
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("lourdes@gmail.com").build());
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("juani@gmail.com").build());
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("Lourdes").setApellido("Gomez").setDireccionCorreo("lourdes@gmail.com").build());
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("Juani").setApellido("Perez").setDireccionCorreo("juani@gmail.com").build());
 
-        client.enviarCorreo(titulo, mensaje, remitente, destinatarios, esFavorito, usuariosGrupo);
+        client.enviarCorreo(titulo, mensaje, remitente, esFavorito, destinatarios, usuariosGrupo);
     }
 }
-
