@@ -4,10 +4,6 @@
 package com;
 
 /**
- * <pre>
- * Representación del correo, según la clase Mail
- * </pre>
- *
  * Protobuf type {@code com.Mail}
  */
 public final class Mail extends
@@ -418,10 +414,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Representación del correo, según la clase Mail
-   * </pre>
-   *
    * Protobuf type {@code com.Mail}
    */
   public static final class Builder extends

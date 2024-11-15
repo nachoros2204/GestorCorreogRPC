@@ -46,6 +46,37 @@ public final class MailServiceGrpc {
     return getMandarMailMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.ConsultarCorreosRequest,
+      com.ConsultarCorreosResponse> getConsultarCorreosMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "consultarCorreos",
+      requestType = com.ConsultarCorreosRequest.class,
+      responseType = com.ConsultarCorreosResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ConsultarCorreosRequest,
+      com.ConsultarCorreosResponse> getConsultarCorreosMethod() {
+    io.grpc.MethodDescriptor<com.ConsultarCorreosRequest, com.ConsultarCorreosResponse> getConsultarCorreosMethod;
+    if ((getConsultarCorreosMethod = MailServiceGrpc.getConsultarCorreosMethod) == null) {
+      synchronized (MailServiceGrpc.class) {
+        if ((getConsultarCorreosMethod = MailServiceGrpc.getConsultarCorreosMethod) == null) {
+          MailServiceGrpc.getConsultarCorreosMethod = getConsultarCorreosMethod =
+              io.grpc.MethodDescriptor.<com.ConsultarCorreosRequest, com.ConsultarCorreosResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "consultarCorreos"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ConsultarCorreosRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ConsultarCorreosResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MailServiceMethodDescriptorSupplier("consultarCorreos"))
+              .build();
+        }
+      }
+    }
+    return getConsultarCorreosMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class MailServiceGrpc {
         io.grpc.stub.StreamObserver<com.MandarMailResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMandarMailMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void consultarCorreos(com.ConsultarCorreosRequest request,
+        io.grpc.stub.StreamObserver<com.ConsultarCorreosResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConsultarCorreosMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class MailServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMandarMailMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void consultarCorreos(com.ConsultarCorreosRequest request,
+        io.grpc.stub.StreamObserver<com.ConsultarCorreosResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConsultarCorreosMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +205,13 @@ public final class MailServiceGrpc {
     public com.MandarMailResponse mandarMail(com.MandarMailRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMandarMailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.ConsultarCorreosResponse consultarCorreos(com.ConsultarCorreosRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConsultarCorreosMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +238,18 @@ public final class MailServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMandarMailMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ConsultarCorreosResponse> consultarCorreos(
+        com.ConsultarCorreosRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConsultarCorreosMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_MANDAR_MAIL = 0;
+  private static final int METHODID_CONSULTAR_CORREOS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +271,10 @@ public final class MailServiceGrpc {
         case METHODID_MANDAR_MAIL:
           serviceImpl.mandarMail((com.MandarMailRequest) request,
               (io.grpc.stub.StreamObserver<com.MandarMailResponse>) responseObserver);
+          break;
+        case METHODID_CONSULTAR_CORREOS:
+          serviceImpl.consultarCorreos((com.ConsultarCorreosRequest) request,
+              (io.grpc.stub.StreamObserver<com.ConsultarCorreosResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,6 +301,13 @@ public final class MailServiceGrpc {
               com.MandarMailRequest,
               com.MandarMailResponse>(
                 service, METHODID_MANDAR_MAIL)))
+        .addMethod(
+          getConsultarCorreosMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ConsultarCorreosRequest,
+              com.ConsultarCorreosResponse>(
+                service, METHODID_CONSULTAR_CORREOS)))
         .build();
   }
 
@@ -284,6 +357,7 @@ public final class MailServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MailServiceFileDescriptorSupplier())
               .addMethod(getMandarMailMethod())
+              .addMethod(getConsultarCorreosMethod())
               .build();
         }
       }

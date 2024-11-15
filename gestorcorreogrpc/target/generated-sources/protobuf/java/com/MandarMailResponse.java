@@ -48,10 +48,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object status_ = "";
   /**
-   * <pre>
-   * Status del envío, como "Enviado", "Fallido", etc.
-   * </pre>
-   *
    * <code>string status = 1;</code>
    * @return The status.
    */
@@ -69,10 +65,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Status del envío, como "Enviado", "Fallido", etc.
-   * </pre>
-   *
    * <code>string status = 1;</code>
    * @return The bytes for status.
    */
@@ -95,10 +87,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object detalle_ = "";
   /**
-   * <pre>
-   * Mensaje adicional sobre el resultado del envío
-   * </pre>
-   *
    * <code>string detalle = 2;</code>
    * @return The detalle.
    */
@@ -116,10 +104,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Mensaje adicional sobre el resultado del envío
-   * </pre>
-   *
    * <code>string detalle = 2;</code>
    * @return The bytes for detalle.
    */
@@ -494,10 +478,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object status_ = "";
     /**
-     * <pre>
-     * Status del envío, como "Enviado", "Fallido", etc.
-     * </pre>
-     *
      * <code>string status = 1;</code>
      * @return The status.
      */
@@ -514,10 +494,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Status del envío, como "Enviado", "Fallido", etc.
-     * </pre>
-     *
      * <code>string status = 1;</code>
      * @return The bytes for status.
      */
@@ -535,10 +511,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Status del envío, como "Enviado", "Fallido", etc.
-     * </pre>
-     *
      * <code>string status = 1;</code>
      * @param value The status to set.
      * @return This builder for chaining.
@@ -552,10 +524,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Status del envío, como "Enviado", "Fallido", etc.
-     * </pre>
-     *
      * <code>string status = 1;</code>
      * @return This builder for chaining.
      */
@@ -566,10 +534,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Status del envío, como "Enviado", "Fallido", etc.
-     * </pre>
-     *
      * <code>string status = 1;</code>
      * @param value The bytes for status to set.
      * @return This builder for chaining.
@@ -586,10 +550,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object detalle_ = "";
     /**
-     * <pre>
-     * Mensaje adicional sobre el resultado del envío
-     * </pre>
-     *
      * <code>string detalle = 2;</code>
      * @return The detalle.
      */
@@ -606,10 +566,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Mensaje adicional sobre el resultado del envío
-     * </pre>
-     *
      * <code>string detalle = 2;</code>
      * @return The bytes for detalle.
      */
@@ -627,10 +583,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Mensaje adicional sobre el resultado del envío
-     * </pre>
-     *
      * <code>string detalle = 2;</code>
      * @param value The detalle to set.
      * @return This builder for chaining.
@@ -644,10 +596,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Mensaje adicional sobre el resultado del envío
-     * </pre>
-     *
      * <code>string detalle = 2;</code>
      * @return This builder for chaining.
      */
@@ -658,10 +606,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Mensaje adicional sobre el resultado del envío
-     * </pre>
-     *
      * <code>string detalle = 2;</code>
      * @param value The bytes for detalle to set.
      * @return This builder for chaining.

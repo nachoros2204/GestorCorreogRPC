@@ -4,10 +4,6 @@
 package com;
 
 /**
- * <pre>
- * Representación de un usuario en el sistema
- * </pre>
- *
  * Protobuf type {@code com.Usuario}
  */
 public final class Usuario extends
@@ -339,10 +335,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Representación de un usuario en el sistema
-   * </pre>
-   *
    * Protobuf type {@code com.Usuario}
    */
   public static final class Builder extends

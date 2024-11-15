@@ -5,6 +5,7 @@ option java_multiple_files = true;
 
 service MailService {
     rpc mandarMail(MandarMailRequest) returns (MandarMailResponse);
+    rpc consultarCorreos(ConsultarCorreosRequest) returns (ConsultarCorreosResponse);
 }
 
 // Definición del mensaje de solicitud para enviar un correo
@@ -23,7 +24,6 @@ message MandarMailResponse {
     string detalle = 2; 
 }
 
-
 message Usuario {
     string nombre = 1;
     string apellido = 2;
@@ -38,6 +38,12 @@ message Mail {
     bool esFavorito = 5;
 }
 
-message GrupoDeUsuarios {
-    repeated Usuario miembros = 1;
+// Solicitud para consultar correos de un destinatario
+message ConsultarCorreosRequest {
+    string destinatario = 1; // Dirección de correo del destinatario
+}
+
+// Respuesta para la consulta de correos
+message ConsultarCorreosResponse {
+    repeated MandarMailRequest correos = 1; // Lista de correos recibidos por el destinatario
 }

@@ -43,8 +43,28 @@ public class MailClient {
         }
     }
 
+    // Nuevo método para consultar historial de correos
+    public void consultarCorreos() {
+        ConsultarCorreosRequest request = ConsultarCorreosRequest.newBuilder()
+                .setDestinatario(destinatario)
+                .build();
+        try {
+            ConsultarCorreosResponse response = mailServiceStub.consultarCorreos(request);
+
+            System.out.println("=== Historial de correos recibidos por " + destinatario + " ===");
+            for (MandarMailRequest correo : response.getCorreosList()) {
+                System.out.println("Título: " + correo.getTitulo());
+                System.out.println("Mensaje: " + correo.getMensaje());
+                System.out.println("Remitente: " + correo.getRemitente());
+                System.out.println("----------------------");
+            }
+        } catch (StatusRuntimeException e) {
+            System.err.println("Error al consultar el historial: " + e.getStatus());
+        }
+    }
+
     public static void main(String[] args) {
-        String host = "localhost";
+        String host = "192.168.0.72";
         int port = 50051;
 
         if (args.length < 1) {
@@ -55,6 +75,10 @@ public class MailClient {
         String destinatario = args[0];
         MailClient client = new MailClient(host, port, destinatario);
 
+        // Consultar historial de correos al iniciar el cliente
+        client.consultarCorreos();
+
+        // Opcional: Lógica adicional para enviar correos
         String titulo = "Prueba de Correo";
         String mensaje = "Este es un mensaje de prueba.";
         String remitente = "remitente@ejemplo.com";
@@ -67,8 +91,9 @@ public class MailClient {
         // Añadir usuarios al grupo
         ArrayList<Usuario> usuariosGrupo = new ArrayList<>();
         usuariosGrupo.add(Usuario.newBuilder().setNombre("Lourdes").setApellido("Gomez").setDireccionCorreo("lourdes@gmail.com").build());
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("Juani").setApellido("Perez").setDireccionCorreo("juani@gmail.com").build());
+        usuariosGrupo.add(Usuario.newBuilder().setNombre("Juani").setApellido("Gualtieri").setDireccionCorreo("juani@gmail.com").build());
 
+        // Enviar un correo (opcional)
         client.enviarCorreo(titulo, mensaje, remitente, esFavorito, destinatarios, usuariosGrupo);
     }
 }

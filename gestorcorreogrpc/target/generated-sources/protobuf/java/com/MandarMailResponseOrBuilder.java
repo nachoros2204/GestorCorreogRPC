@@ -8,19 +8,11 @@ public interface MandarMailResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Status del envío, como "Enviado", "Fallido", etc.
-   * </pre>
-   *
    * <code>string status = 1;</code>
    * @return The status.
    */
   java.lang.String getStatus();
   /**
-   * <pre>
-   * Status del envío, como "Enviado", "Fallido", etc.
-   * </pre>
-   *
    * <code>string status = 1;</code>
    * @return The bytes for status.
    */
@@ -28,19 +20,11 @@ public interface MandarMailResponseOrBuilder extends
       getStatusBytes();
 
   /**
-   * <pre>
-   * Mensaje adicional sobre el resultado del envío
-   * </pre>
-   *
    * <code>string detalle = 2;</code>
    * @return The detalle.
    */
   java.lang.String getDetalle();
   /**
-   * <pre>
-   * Mensaje adicional sobre el resultado del envío
-   * </pre>
-   *
    * <code>string detalle = 2;</code>
    * @return The bytes for detalle.
    */

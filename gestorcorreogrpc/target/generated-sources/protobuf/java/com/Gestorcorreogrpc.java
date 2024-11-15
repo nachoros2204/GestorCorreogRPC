@@ -35,10 +35,15 @@ public final class Gestorcorreogrpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_Mail_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_GrupoDeUsuarios_descriptor;
+    internal_static_com_ConsultarCorreosRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_GrupoDeUsuarios_fieldAccessorTable;
+      internal_static_com_ConsultarCorreosRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_ConsultarCorreosResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_ConsultarCorreosResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -58,10 +63,14 @@ public final class Gestorcorreogrpc {
       "\001(\t\022\027\n\017direccionCorreo\030\003 \001(\t\"d\n\004Mail\022\016\n\006" +
       "titulo\030\001 \001(\t\022\017\n\007mensaje\030\002 \001(\t\022\021\n\tremiten" +
       "te\030\003 \001(\t\022\024\n\014destinatario\030\004 \003(\t\022\022\n\nesFavo" +
-      "rito\030\005 \001(\010\"1\n\017GrupoDeUsuarios\022\036\n\010miembro" +
-      "s\030\001 \003(\0132\014.com.Usuario2L\n\013MailService\022=\n\n" +
-      "mandarMail\022\026.com.MandarMailRequest\032\027.com" +
-      ".MandarMailResponseB\002P\001b\006proto3"
+      "rito\030\005 \001(\010\"/\n\027ConsultarCorreosRequest\022\024\n" +
+      "\014destinatario\030\001 \001(\t\"C\n\030ConsultarCorreosR" +
+      "esponse\022\'\n\007correos\030\001 \003(\0132\026.com.MandarMai" +
+      "lRequest2\235\001\n\013MailService\022=\n\nmandarMail\022\026" +
+      ".com.MandarMailRequest\032\027.com.MandarMailR" +
+      "esponse\022O\n\020consultarCorreos\022\034.com.Consul" +
+      "tarCorreosRequest\032\035.com.ConsultarCorreos" +
+      "ResponseB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91,12 +100,18 @@ public final class Gestorcorreogrpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_Mail_descriptor,
         new java.lang.String[] { "Titulo", "Mensaje", "Remitente", "Destinatario", "EsFavorito", });
-    internal_static_com_GrupoDeUsuarios_descriptor =
+    internal_static_com_ConsultarCorreosRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_GrupoDeUsuarios_fieldAccessorTable = new
+    internal_static_com_ConsultarCorreosRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_GrupoDeUsuarios_descriptor,
-        new java.lang.String[] { "Miembros", });
+        internal_static_com_ConsultarCorreosRequest_descriptor,
+        new java.lang.String[] { "Destinatario", });
+    internal_static_com_ConsultarCorreosResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_ConsultarCorreosResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_ConsultarCorreosResponse_descriptor,
+        new java.lang.String[] { "Correos", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
