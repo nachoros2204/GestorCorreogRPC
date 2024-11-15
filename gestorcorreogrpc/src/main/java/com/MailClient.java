@@ -30,18 +30,29 @@ public class MailClient {
         try {
             // Enviar el correo
             MandarMailResponse response = mailServiceStub.mandarMail(request);
+            
+            // Mostrar estatus, detalle y correo recibido
             System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
-
-            // Mostrar correo recibido en el cliente correspondiente
             System.out.println("Correo recibido por " + destinatario + ":");
             System.out.println("Título: " + titulo);
             System.out.println("Mensaje: " + mensaje);
             System.out.println("Remitente: " + remitente);
+    
+            // Mostrar historial de correos recibidos
+            System.out.println("\n=== Historial de correos recibidos por " + destinatario + " ===");
+            for (Mail mail : historialDeCorreos) {
+                System.out.println("- Título: " + mail.getTitulo());
+                System.out.println("  Mensaje: " + mail.getMensaje());
+                System.out.println("  Remitente: " + mail.getRemitente());
+                System.out.println("  Favorito: " + (mail.getEsFavorito() ? "Sí" : "No"));
+                System.out.println();
+            }
         } catch (StatusRuntimeException e) {
             System.err.println("Error al enviar el correo: " + e.getStatus());
         }
     }
+    
 
     // Nuevo método para consultar historial de correos
     public void consultarCorreos() {
