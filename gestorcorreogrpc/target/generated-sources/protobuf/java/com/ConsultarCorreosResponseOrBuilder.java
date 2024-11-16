@@ -9,7 +9,7 @@ public interface ConsultarCorreosResponseOrBuilder extends
 
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -18,7 +18,7 @@ public interface ConsultarCorreosResponseOrBuilder extends
       getCorreosList();
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -26,7 +26,7 @@ public interface ConsultarCorreosResponseOrBuilder extends
   com.MandarMailRequest getCorreos(int index);
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -34,7 +34,7 @@ public interface ConsultarCorreosResponseOrBuilder extends
   int getCorreosCount();
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -43,7 +43,7 @@ public interface ConsultarCorreosResponseOrBuilder extends
       getCorreosOrBuilderList();
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>

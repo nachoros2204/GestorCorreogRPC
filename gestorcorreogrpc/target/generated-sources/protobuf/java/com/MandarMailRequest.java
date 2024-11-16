@@ -4,10 +4,6 @@
 package com;
 
 /**
- * <pre>
- * Definición del mensaje de solicitud para enviar un correo
- * </pre>
- *
  * Protobuf type {@code com.MandarMailRequest}
  */
 public final class MandarMailRequest extends
@@ -171,7 +167,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -183,7 +179,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -194,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -206,7 +202,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -234,7 +230,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.Usuario> usuariosGrupo_;
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -245,7 +241,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -257,7 +253,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -268,7 +264,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -279,7 +275,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -509,10 +505,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Definición del mensaje de solicitud para enviar un correo
-   * </pre>
-   *
    * Protobuf type {@code com.MandarMailRequest}
    */
   public static final class Builder extends
@@ -1029,7 +1021,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1042,7 +1034,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1053,7 +1045,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1065,7 +1057,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1078,7 +1070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1097,7 +1089,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1115,7 +1107,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1133,7 +1125,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1148,7 +1140,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de direcciones de correo de los destinatarios
+     *lista de direcciones de correo de los destinatarios
      * </pre>
      *
      * <code>repeated string destinatarios = 4;</code>
@@ -1212,7 +1204,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1226,7 +1218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1240,7 +1232,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1254,7 +1246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1275,7 +1267,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1293,7 +1285,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1313,7 +1305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1334,7 +1326,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1352,7 +1344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1370,7 +1362,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1389,7 +1381,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1406,7 +1398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1423,7 +1415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1434,7 +1426,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1448,7 +1440,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1463,7 +1455,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1474,7 +1466,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -1486,7 +1478,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Usuarios pertenecientes al grupo (si aplica)
+     *usuarios pertenecientes al grupo (si aplica)
      * </pre>
      *
      * <code>repeated .com.Usuario usuariosGrupo = 6;</code>

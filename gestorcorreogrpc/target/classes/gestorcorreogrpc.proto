@@ -8,17 +8,16 @@ service MailService {
     rpc consultarCorreos(ConsultarCorreosRequest) returns (ConsultarCorreosResponse);
 }
 
-// Definición del mensaje de solicitud para enviar un correo
 message MandarMailRequest {
     string titulo = 1;
     string mensaje = 2;
     string remitente = 3;
-    repeated string destinatarios = 4; // Lista de direcciones de correo de los destinatarios
+    repeated string destinatarios = 4; //lista de direcciones de correo de los destinatarios
     bool esFavorito = 5;
-    repeated Usuario usuariosGrupo = 6; // Usuarios pertenecientes al grupo (si aplica)
+    repeated Usuario usuariosGrupo = 6; //usuarios pertenecientes al grupo (si aplica)
 }
 
-// Definición del mensaje de respuesta para confirmar el envío del correo
+//defiincin del mensaje de respuesta para confirmar el envío del correo
 message MandarMailResponse {
     string status = 1; 
     string detalle = 2; 
@@ -38,12 +37,12 @@ message Mail {
     bool esFavorito = 5;
 }
 
-// Solicitud para consultar correos de un destinatario
+//solicitud para consultar correos de un destinatario
 message ConsultarCorreosRequest {
     string destinatario = 1; // Dirección de correo del destinatario
 }
 
-// Respuesta para la consulta de correos
+//respuesta para la consulta de correos
 message ConsultarCorreosResponse {
-    repeated MandarMailRequest correos = 1; // Lista de correos recibidos por el destinatario
+    repeated MandarMailRequest correos = 1; //lista de correos recibidos por el destinatario
 }

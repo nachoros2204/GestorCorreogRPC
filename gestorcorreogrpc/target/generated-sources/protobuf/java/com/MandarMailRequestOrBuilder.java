@@ -45,7 +45,7 @@ public interface MandarMailRequestOrBuilder extends
 
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -55,7 +55,7 @@ public interface MandarMailRequestOrBuilder extends
       getDestinatariosList();
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -64,7 +64,7 @@ public interface MandarMailRequestOrBuilder extends
   int getDestinatariosCount();
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -74,7 +74,7 @@ public interface MandarMailRequestOrBuilder extends
   java.lang.String getDestinatarios(int index);
   /**
    * <pre>
-   * Lista de direcciones de correo de los destinatarios
+   *lista de direcciones de correo de los destinatarios
    * </pre>
    *
    * <code>repeated string destinatarios = 4;</code>
@@ -92,7 +92,7 @@ public interface MandarMailRequestOrBuilder extends
 
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -101,7 +101,7 @@ public interface MandarMailRequestOrBuilder extends
       getUsuariosGrupoList();
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -109,7 +109,7 @@ public interface MandarMailRequestOrBuilder extends
   com.Usuario getUsuariosGrupo(int index);
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -117,7 +117,7 @@ public interface MandarMailRequestOrBuilder extends
   int getUsuariosGrupoCount();
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>
@@ -126,7 +126,7 @@ public interface MandarMailRequestOrBuilder extends
       getUsuariosGrupoOrBuilderList();
   /**
    * <pre>
-   * Usuarios pertenecientes al grupo (si aplica)
+   *usuarios pertenecientes al grupo (si aplica)
    * </pre>
    *
    * <code>repeated .com.Usuario usuariosGrupo = 6;</code>

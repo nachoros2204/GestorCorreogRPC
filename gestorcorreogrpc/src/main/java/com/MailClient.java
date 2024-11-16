@@ -30,18 +30,14 @@ public class MailClient {
                 .addAllUsuariosGrupo(usuariosGrupo)
                 .build();
         try {
-            //enviamos correo
+            // Enviar correo al servidor
             MandarMailResponse response = mailServiceStub.mandarMail(request);
-
-            //mostrar estatus, detalle y correo recibido
+    
+            // Mostrar resultado del envío
             System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
-            System.out.println("Correo recibido por " + destinatario + ":");
-            System.out.println("Título: " + titulo);
-            System.out.println("Mensaje: " + mensaje);
-            System.out.println("Remitente: " + remitente);
-
-            // Agregar el correo al historial
+    
+            // Crear un nuevo Mail y agregarlo al historial local
             Mail correo = Mail.newBuilder()
                     .setTitulo(titulo)
                     .setMensaje(mensaje)
@@ -50,9 +46,9 @@ public class MailClient {
                     .setEsFavorito(esFavorito)
                     .build();
             historialDeCorreos.add(correo);
-
-            // Mostrar historial de correos recibidos
-            System.out.println("\n=== Historial de correos recibidos por " + destinatario + " ===");
+    
+            // Mostrar el historial actualizado
+            System.out.println("\n=== Historial de correos enviados por este cliente ===");
             for (Mail mail : historialDeCorreos) {
                 System.out.println("- Título: " + mail.getTitulo());
                 System.out.println("  Mensaje: " + mail.getMensaje());

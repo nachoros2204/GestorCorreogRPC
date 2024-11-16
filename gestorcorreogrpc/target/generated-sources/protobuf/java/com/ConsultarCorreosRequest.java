@@ -5,7 +5,7 @@ package com;
 
 /**
  * <pre>
- * Solicitud para consultar correos de un destinatario
+ *solicitud para consultar correos de un destinatario
  * </pre>
  *
  * Protobuf type {@code com.ConsultarCorreosRequest}
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Solicitud para consultar correos de un destinatario
+   *solicitud para consultar correos de un destinatario
    * </pre>
    *
    * Protobuf type {@code com.ConsultarCorreosRequest}

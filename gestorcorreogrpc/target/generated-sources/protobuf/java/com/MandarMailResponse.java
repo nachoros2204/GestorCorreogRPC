@@ -5,7 +5,7 @@ package com;
 
 /**
  * <pre>
- * Definición del mensaje de respuesta para confirmar el envío del correo
+ *defiincin del mensaje de respuesta para confirmar el envío del correo
  * </pre>
  *
  * Protobuf type {@code com.MandarMailResponse}
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Definición del mensaje de respuesta para confirmar el envío del correo
+   *defiincin del mensaje de respuesta para confirmar el envío del correo
    * </pre>
    *
    * Protobuf type {@code com.MandarMailResponse}

@@ -5,7 +5,7 @@ package com;
 
 /**
  * <pre>
- * Respuesta para la consulta de correos
+ *respuesta para la consulta de correos
  * </pre>
  *
  * Protobuf type {@code com.ConsultarCorreosResponse}
@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.MandarMailRequest> correos_;
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Lista de correos recibidos por el destinatario
+   *lista de correos recibidos por el destinatario
    * </pre>
    *
    * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Respuesta para la consulta de correos
+   *respuesta para la consulta de correos
    * </pre>
    *
    * Protobuf type {@code com.ConsultarCorreosResponse}
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Lista de correos recibidos por el destinatario
+     *lista de correos recibidos por el destinatario
      * </pre>
      *
      * <code>repeated .com.MandarMailRequest correos = 1;</code>
