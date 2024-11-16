@@ -17,7 +17,7 @@ public class MailClient {
                 .build();
         this.mailServiceStub = MailServiceGrpc.newBlockingStub(channel);
         this.destinatario = destinatario;
-        this.historialDeCorreos = new ArrayList<>(); //creamos el historial
+        this.historialDeCorreos = new ArrayList<>(); // inicializamos el historial
     }
 
     public void enviarCorreo(String titulo, String mensaje, String remitente, boolean esFavorito, List<String> destinatarios, List<Usuario> usuariosGrupo) {
@@ -30,63 +30,73 @@ public class MailClient {
                 .addAllUsuariosGrupo(usuariosGrupo)
                 .build();
         try {
-            // Enviar correo al servidor
+            // enviamos correo
             MandarMailResponse response = mailServiceStub.mandarMail(request);
-    
-            // Mostrar resultado del envío
+
+            // mostrar estatus y detalle
             System.out.println("Estatus del envío: " + response.getStatus());
             System.out.println("Detalle: " + response.getDetalle());
-    
-            // Crear un nuevo Mail y agregarlo al historial local
-            Mail correo = Mail.newBuilder()
-                    .setTitulo(titulo)
-                    .setMensaje(mensaje)
-                    .setRemitente(remitente)
-                    .addAllDestinatario(destinatarios)
-                    .setEsFavorito(esFavorito)
-                    .build();
-            historialDeCorreos.add(correo);
-    
-            // Mostrar el historial actualizado
-            System.out.println("\n=== Historial de correos enviados por este cliente ===");
-            for (Mail mail : historialDeCorreos) {
-                System.out.println("- Título: " + mail.getTitulo());
-                System.out.println("  Mensaje: " + mail.getMensaje());
-                System.out.println("  Remitente: " + mail.getRemitente());
-                System.out.println("  Favorito: " + (mail.getEsFavorito() ? "Sí" : "No"));
-                System.out.println();
-            }
         } catch (StatusRuntimeException e) {
             System.err.println("Error al enviar el correo: " + e.getStatus());
         }
     }
 
-    public static void main(String[] args) {
-        String host = "192.168.0.72";
-        int port = 50051;
+    public void consultarHistorialDeCorreos(String destinatario) {
+        ConsultarCorreosRequest request = ConsultarCorreosRequest.newBuilder()
+                .setDestinatario(destinatario)
+                .build();
+        try {
+            ConsultarCorreosResponse response = mailServiceStub.consultarCorreos(request);
+            System.out.println("\n=== Historial de correos recibidos por " + destinatario + " ===");
+            for (MandarMailRequest correo : response.getCorreosList()) {
+                System.out.println("- Título: " + correo.getTitulo());
+                System.out.println("  Mensaje: " + correo.getMensaje());
+                System.out.println("  Remitente: " + correo.getRemitente());
+                System.out.println("  Favorito: " + (correo.getEsFavorito() ? "Sí" : "No"));
+                System.out.println();
+            }
+        } catch (StatusRuntimeException e) {
+            System.err.println("Error al consultar correos: " + e.getStatus());
+        }
+    }
 
-        if (args.length < 1) {
-            System.err.println("Especifique el destinatario como argumento.");
+    public static void main(String[] args) {
+        if (args.length < 2) {
+            System.err.println("Uso: <correo_cliente> <modo (remitente|destinatario)>");
             return;
         }
 
-        String destinatario = args[0];
-        MailClient client = new MailClient("192.168.0.72", 50051, destinatario);
+        String correoCliente = args[0];
+        String modo = args[1];
+        MailClient client = new MailClient("192.168.0.72", 50051, correoCliente);
 
-        String titulo = "Prueba de Correo";
-        String mensaje = "Este es un mensaje de prueba.";
-        String remitente = "remitente@ejemplo.com";
+        if ("remitente".equalsIgnoreCase(modo)) {
+            ejecutarComoRemitente(client, correoCliente);
+        } else if ("destinatario".equalsIgnoreCase(modo)) {
+            ejecutarComoDestinatario(client, correoCliente);
+        } else {
+            System.err.println("Modo no válido. Use 'remitente' o 'destinatario'.");
+        }
+    }
 
-        List<String> destinatarios = new ArrayList<>();
-        destinatarios.add(destinatario);
+    private static void ejecutarComoRemitente(MailClient client, String remitente) {
+        System.out.println("=== Modo Remitente ===");
+        String titulo = "Correo automático";
+        String mensaje = "Este es un correo enviado automáticamente desde " + remitente;
 
+        // Destinatarios a los que se enviarán correos
+        List<String> destinatarios = List.of("nacho@gmail.com", "lourdes@gmail.com");
         boolean esFavorito = false;
 
-        // Añadir usuarios al grupo
-        ArrayList<Usuario> usuariosGrupo = new ArrayList<>();
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("Lourdes").setApellido("Gomez").setDireccionCorreo("lourdes@gmail.com").build());
-        usuariosGrupo.add(Usuario.newBuilder().setNombre("Juani").setApellido("Perez").setDireccionCorreo("juani@gmail.com").build());
+        // Usuarios en grupo (opcional)
+        List<Usuario> usuariosGrupo = new ArrayList<>();
 
+        // Enviar el correo
         client.enviarCorreo(titulo, mensaje, remitente, esFavorito, destinatarios, usuariosGrupo);
+    }
+
+    private static void ejecutarComoDestinatario(MailClient client, String destinatario) {
+        System.out.println("=== Modo Destinatario ===");
+        client.consultarHistorialDeCorreos(destinatario);
     }
 }
